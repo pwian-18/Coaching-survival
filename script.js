@@ -408,8 +408,14 @@ document
     location.reload();
 };
 };  
-document.getElementById("submitBtn")
-.addEventListener("click", sendResponse);
+window.addEventListener("load",()=>{
+
+    document.getElementById("submitBtn")
+    .addEventListener("click", sendResponse);
+
+    showPage(1);
+
+});
 
 
 const formspreeURL = "https://formspree.io/f/mzdnwwbo";
@@ -463,8 +469,5 @@ function sendResponse(){
         alert("Submission failed");
     });
 
-}
-}
 
-
-    showPage(1);
+}
