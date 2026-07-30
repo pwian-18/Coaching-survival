@@ -412,7 +412,8 @@ function showReport(){
     };
 
 }
-
+document.getElementById("submitBtn")
+.addEventListener("click", sendResponse);
 // ---------- Start First Page ----------
 
 window.onload=()=>{
