@@ -396,7 +396,7 @@ function showReport(){
 <p>${user.answer}</p>
 
 </div>
-
+};
 <button id="restart">
 🔄 Try Again
 </button>
