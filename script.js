@@ -420,3 +420,31 @@ window.onload=()=>{
     showPage(1);
 
 };
+const formspreeURL = "https://formspree.io/f/mzdnwwbo";
+
+async function sendResponse(){
+
+    let data = {
+        username: document.getElementById("username").value,
+        batch: selectedBatch,
+        subjects: selectedSubjects.join(", "),
+        timestamp: new Date().toString()
+    };
+
+
+    fetch(formspreeURL, {
+        method: "POST",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response=>{
+        alert("Response submitted successfully 🚀");
+    })
+    .catch(error=>{
+        alert("Error submitting response");
+        console.log(error);
+    });
+
+}
