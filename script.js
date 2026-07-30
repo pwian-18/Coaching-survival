@@ -402,14 +402,11 @@ function showReport(){
 </button>
 
 `;
-
-    document
-    .getElementById("restartBtn")
-    .onclick=()=>{
-
-        location.reload();
-
-    };
+document
+.getElementById("restart")
+.onclick=()=>{
+    location.reload();
+};
 
 }
 document.getElementById("submitBtn")
