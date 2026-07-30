@@ -397,7 +397,7 @@ function showReport(){
 
 </div>
 
-<button id="restartBtn">
+<button id="restart">
 🔄 Try Again
 </button>
 
@@ -407,42 +407,63 @@ document
 .onclick=()=>{
     location.reload();
 };
-
-}
 document.getElementById("submitBtn")
 .addEventListener("click", sendResponse);
-// ---------- Start First Page ----------
 
-window.onload=()=>{
 
-    showPage(1);
-
-};
 const formspreeURL = "https://formspree.io/f/mzdnwwbo";
 
-async function sendResponse(){
+
+function sendResponse(){
 
     let data = {
-        username: document.getElementById("username").value,
-        batch: selectedBatch,
-        subjects: selectedSubjects.join(", "),
+
+        username: user.name,
+
+        batch: user.batch,
+
+        subjects: user.subjects.join(", "),
+
+        physics_rating: user.ratings.physics,
+
+        chemistry_rating: user.ratings.chemistry,
+
+        maths_rating: user.ratings.maths,
+
+        biology_rating: user.ratings.biology,
+
+        mood: user.mood,
+
+        answer: user.answer,
+
         timestamp: new Date().toString()
+
     };
 
 
     fetch(formspreeURL, {
-        method: "POST",
+
+        method:"POST",
+
         headers:{
             "Content-Type":"application/json"
         },
-        body: JSON.stringify(data)
+
+        body:JSON.stringify(data)
+
     })
-    .then(response=>{
+
+    .then(()=>{
         alert("Response submitted successfully 🚀");
     })
+
     .catch(error=>{
-        alert("Error submitting response");
         console.log(error);
+        alert("Submission failed");
     });
 
 }
+}
+
+
+    showPage(1);
