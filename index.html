@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Coaching Survival AI</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="bg1"></div>
+<div class="bg2"></div>
+
+<div class="app">
+
+<!-- Progress -->
+
+<div class="progress">
+
+<div class="progressBar" id="progressBar"></div>
+
+</div>
+
+<!-- Page 1 -->
+
+<section class="page active" id="page1">
+
+<h1>🤖 Coaching Survival AI</h1>
+
+<p class="subtitle">
+
+Powered by Artificial Intelligence
+
+</p>
+
+<div class="glass">
+
+<h2>Welcome 👋</h2>
+
+<p>
+
+Measure today's coaching pain level and get your AI Survival Report.
+
+</p>
+
+<button id="startBtn">
+
+Start Mission 🚀
+
+</button>
+
+</div>
+
+</section>
+
+<!-- Page 2 -->
+
+<section class="page" id="page2">
+
+<div class="glass">
+
+<h2>Your Nickname</h2>
+
+<p>
+
+(Optional)
+
+</p>
+
+<input
+
+type="text"
+
+id="username"
+
+placeholder="Anonymous Hero 😎"
+
+>
+
+<button id="toBatch">
+
+Next →
+
+</button>
+
+</div>
+
+</section>
+
+<!-- Page 3 -->
+
+<section class="page" id="page3">
+
+<div class="glass">
+
+<h2>Select Batch</h2>
+
+<button class="batchBtn" data-batch="Morning">
+
+🌅 Morning
+
+</button>
+
+<button class="batchBtn" data-batch="Evening">
+
+🌇 Evening
+
+</button>
+
+<button class="batchBtn" data-batch="Other">
+
+🌙 Other
+
+</button>
+
+</div>
+
+</section>
+
+<!-- Page 4 -->
+
+<section class="page" id="page4">
+
+<div class="glass">
+
+<h2>Select Subjects</h2>
+
+<label><input type="checkbox" value="Physics"> Physics</label>
+
+<label><input type="checkbox" value="Chemistry"> Chemistry</label>
+
+<label><input type="checkbox" value="Maths"> Maths</label>
+
+<label><input type="checkbox" value="Biology"> Biology</label>
+
+<button id="subjectNext">
+
+Continue →
+
+</button>
+
+</div>
+
+</section>
+<!-- Page 5 -->
+
+<section class="page" id="page5">
+
+<div class="glass">
+
+<h2>⭐ Rate Today's Classes</h2>
+
+<div class="subjectRating">
+
+<p>Physics</p>
+
+<input type="range" min="1" max="5" value="3" id="phyRate">
+
+</div>
+
+<div class="subjectRating">
+
+<p>Chemistry</p>
+
+<input type="range" min="1" max="5" value="3" id="chemRate">
+
+</div>
+
+<div class="subjectRating">
+
+<p>Maths</p>
+
+<input type="range" min="1" max="5" value="3" id="mathRate">
+
+</div>
+
+<div class="subjectRating">
+
+<p>Biology</p>
+
+<input type="range" min="1" max="5" value="3" id="bioRate">
+
+</div>
+
+<button id="ratingNext">
+
+Continue →
+
+</button>
+
+</div>
+
+</section>
+
+<!-- Page 6 -->
+
+<section class="page" id="page6">
+
+<div class="glass">
+
+<h2>😂 Mood Check</h2>
+
+<p>
+
+How are you feeling after today's coaching?
+
+</p>
+
+<div class="moodGrid">
+
+<button class="moodBtn">😎</button>
+
+<button class="moodBtn">🙂</button>
+
+<button class="moodBtn">🥲</button>
+
+<button class="moodBtn">😭</button>
+
+<button class="moodBtn">🤯</button>
+
+<button class="moodBtn">💀</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Page 7 -->
+
+<section class="page" id="page7">
+
+<div class="glass">
+
+<h2>One Honest Question 😁</h2>
+
+<p>
+
+If tomorrow's classes were cancelled...
+
+What would you do first?
+
+</p>
+
+<textarea
+
+id="answer"
+
+placeholder="Sleep...Play Games...Study...Anything 😂"
+
+></textarea>
+
+<button id="submitSurvey">
+
+Analyze Me 🤖
+
+</button>
+
+</div>
+
+</section>
+
+<!-- Page 8 -->
+
+<section class="page" id="page8">
+
+<div class="glass loading">
+
+<h2>
+
+🤖 Coaching AI
+
+</h2>
+
+<div id="typingArea">
+
+Initializing...
+
+</div>
+
+<div class="loader">
+
+<div class="loaderBar" id="loaderBar"></div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Page 9 -->
+
+<section class="page" id="page9">
+
+<div class="glass report">
+
+<h1>
+
+🎉 AI Survival Report
+
+</h1>
+
+<div id="reportContent">
+
+</div>
+
+<button id="restart">
+
+Try Again 🔄
+
+</button>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+</div>
+
+</body>
+
+</html>
