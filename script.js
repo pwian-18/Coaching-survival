@@ -396,7 +396,7 @@ function showReport(){
 <p>${user.answer}</p>
 
 </div>
-};
+
 <button id="restart">
 🔄 Try Again
 </button>
@@ -407,6 +407,7 @@ document
 .onclick=()=>{
     location.reload();
 };
+};  
 document.getElementById("submitBtn")
 .addEventListener("click", sendResponse);
 
